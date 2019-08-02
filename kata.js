@@ -6,21 +6,24 @@ function AddInfinity(op1, op2) {
     let hasil = 0, unitPlace;result="";
     op1.forEach((element, index) => {
         let temp = new Number(element) + new Number(op2[index]) +Number(hasil);
-        console.log(temp);
+    //    console.log(temp);
         if(String(temp).length>1){
             hasil=String(temp).split("")[0];
             unitPlace=String(temp).split("")[1];
+            console.log(hasil + " " +unitPlace);
         }
         else{
             unitPlace=String(temp).split("")[0];
         }
-        console.log(hasil+ " "+unitPlace);
+        //console.log(unitPlace);
         result+=unitPlace;
+        
     });
+    console.log(result);
 }
-console.log(AddInfinity('9'.split(""),'9'.split("")));
+AddInfinity('10'.split(""),'19'.split(""));
 function sumStrings(a, b) {
-    console.log("Called");
+    //console.log("Called");
     if (!isNaN(new Number(a)) && !isNaN(new Number(a))) {
         let aNum = a.split("");
         let bNum = b.split("");
@@ -49,4 +52,4 @@ function sumStrings(a, b) {
 }
 
 
-sumStrings('1268768768763', '1');
+//sumStrings('1268768768763', '1');
