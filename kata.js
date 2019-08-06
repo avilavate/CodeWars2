@@ -50,6 +50,6 @@ function sumStrings(a, b) {
 }
 
 
-let { a, b } = sumStrings('12687687687637645749854398543785439855645', '1');
+let { a, b } = sumStrings('10000000000000000000000000000000000000000000', '1111');
 
 console.log(AddInfinity(String(a).split(""),String(b).split("")));
