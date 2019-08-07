@@ -1,11 +1,14 @@
 /*jshint esversion: 6 */
 
-function AddInfinity(op1, op2) {
-    op1 = op1.reverse();
-    op2 = op2.reverse();
+function AddInfinity(a, b) {
+    a = String(a).split("");
+    b = String(b).split("");
+
+    a = a.reverse();
+    b = b.reverse();
     let hasil = 0, unitPlace; result = "";
-    op1.forEach((element, index) => {
-        let temp = new Number(element) + new Number(op2[index]) + Number(hasil);
+    a.forEach((element, index) => {
+        let temp = new Number(element) + new Number(b[index]) + Number(hasil);
 
         if (String(temp).length > 1) {
             hasil = String(temp).split("")[0];
@@ -19,7 +22,13 @@ function AddInfinity(op1, op2) {
         result += unitPlace;
 
     });
-    return String(result).split("").reverse().join("");
+    if (hasil > 0) {
+        result =  String(hasil)+String(result).split("").reverse().join("");
+    }
+    else{
+        result =  String(result).split("").reverse().join("");
+    }
+    return result;
 }
 //console.log(AddInfinity('10'.split(""),'101'.split("")));
 function sumStrings(a, b) {
@@ -50,6 +59,6 @@ function sumStrings(a, b) {
 }
 
 
-let { a, b } = sumStrings('10000000000000000000000000000000000000000000', '1111');
+let { a, b } = sumStrings('99', '10');
 
-console.log(AddInfinity(String(a).split(""),String(b).split("")));
+console.log(AddInfinity(a, b));
