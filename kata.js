@@ -29,7 +29,10 @@ function AddInfinity(a, b) {
     else {
         result = String(result).split("").reverse().join("");
     }
-    return result;
+
+    
+
+    return result.replace(/^0+/, '');;
 }
 //console.log(AddInfinity('10'.split(""),'101'.split("")));
 function sumStrings(a, b) {
